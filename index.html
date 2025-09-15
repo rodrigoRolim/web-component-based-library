@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="main.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <my-card title="rodrigo rolim" content="Engenheiro de Software"></my-card>
+  <my-button text="My button" color="secondary" id="my-button"></my-button>
+
+  <script>
+    const buttonEl = document.querySelector('#my-button')
+    buttonEl.addEventListener('greeting', (e) => {
+      alert(e.detail.message)
+    })
+  </script>
+</body>
+</html>
