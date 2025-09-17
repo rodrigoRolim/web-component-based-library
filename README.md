@@ -8,7 +8,7 @@ A modern boilerplate to create and distribute **native Web Components** using [V
 - 🧩 **Native Web Components** with no framework dependencies.
 - 🗂️ Clean structure for multiple components.
 - 📦 **Library build mode** ready for npm publishing or CDN usage.
-- 🔌 Custom plugin to compile `.wc` files (Single-File-Component style).
+- 🔌 Custom plugin to compile `.htm` files (Single-File-Component style).
 
 ---
 
