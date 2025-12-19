@@ -8,10 +8,7 @@ export default defineConfig(({ command, mode }) => {
       minify: isProd ? 'esbuild' : false,
       sourcemap: !isProd,
       lib: {
-        entry: {
-          'my-button': './components/my-button.htm',
-          'my-card': './components/my-card.htm'
-        },
+        entry: 'src/index.ts',
         name: 'Components',
         fileName: (format, entryName) => `${entryName}.${format}.js`,
         formats: ['es']
@@ -20,6 +17,8 @@ export default defineConfig(({ command, mode }) => {
         // external deps like lodash
         external: [],
         output: {
+          preserveModules: true,
+          preserveModulesRoot: 'src',
           globals: {}
         }
       }
@@ -27,3 +26,4 @@ export default defineConfig(({ command, mode }) => {
     plugins: [vitePluginWC()]
   }
 })
+
