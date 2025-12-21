@@ -7,10 +7,9 @@ const OUTPUT = 'src/index.ts'
 const lines = []
 
 for (const dir of readdirSync(COMPONENTS_DIR, { withFileTypes: true })) {
-  if (!dir.name.includes('register')) continue
+  if (dir.name.includes('.htm') || dir.name.includes('.stories.ts')) continue
 
-  const base = dir.name.replace('.register.ts', '.register')
-  const registerFile = base //`${base}.register.ts`
+  const registerFile = dir.name.replace('.ts', '')
 
   lines.push(
     `export * from './components/${registerFile}'`
