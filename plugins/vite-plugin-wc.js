@@ -11,7 +11,7 @@ export default function VitePluginWC() {
     enforce: 'pre',
 
     transform(code, id) {
-      if (!id.endsWith('.template.htm')) return
+      if (!id.endsWith('.htm')) return
 
       const template = extract(code, 'template')
       const style = extract(code, 'style')
