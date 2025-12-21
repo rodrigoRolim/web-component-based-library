@@ -1,7 +1,8 @@
 {
-  "name": "web-components",
+  "name": "web-components-lib",
   "version": "1.0.0",
-  "main": "main.js",
+  "type": "module",
+  "files": ["dist"],
   "exports": {
     ".": {
       "import": "./dist/index.js"
