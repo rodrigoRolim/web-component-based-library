@@ -1,1 +1,1 @@
-export * from './components/my-button.register'
+export * from './components/my-button'

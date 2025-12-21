@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
-import './my-button.register';
+import './my-button';
 
 const meta: Meta = {
   title: 'Components/My Button',

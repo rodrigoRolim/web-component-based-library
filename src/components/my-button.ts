@@ -1,7 +1,7 @@
-import { template, sheet } from './my-button.template.htm'
+import { template, sheet } from './my-button.htm'
 
 export class MyButton extends HTMLElement {
-  static tag = 'my-button'
+  static tag = 'my-button' // tag name (optional)
   static observedAttributes = ['text', 'color']
 
   private $el!: HTMLButtonElement
@@ -28,4 +28,8 @@ export class MyButton extends HTMLElement {
     this.$el.textContent = this.getAttribute('text') || ''
     this.$el.className = `my-button ${this.getAttribute('color') || ''}`
   }
+}
+
+if (!customElements.get(MyButton.tag)) {
+  customElements.define(MyButton.tag, MyButton);
 }
